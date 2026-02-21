@@ -2,6 +2,13 @@
 
 A collection of practical security tools developed to demonstrate core cybersecurity concepts, automation, and risk assessment.
 
+## 🛠️ Integration & Scaling
+All tools in this repository are designed with **modular architecture**. 
+- **JSON Output:** Functions return structured dictionaries, making them ready for REST API integration (FastAPI/Flask).
+- **Extensible:** The Port Scanner uses a Class-based approach, allowing it to be imported into larger monitoring dashboards.
+- **Decoupled Logic:** Input/Output logic is separated from the security analysis engines.
+
+
 ---
 
 ## 🔑 Project 1: Password Strength & Entropy Analyzer
@@ -22,5 +29,11 @@ This tool evaluates the strength of a password not just by "rules," but by calcu
 ```bash
 python password_check.py
 
+### 🛡️ Advanced Password Security (v2.0)
+The Password Analyzer has been upgraded to a production-ready class:
+- **Pwned-API Integration:** Uses K-Anonymity to check if passwords have been compromised in historical data breaches without exposing the plain-text password.
+- **Secure Hashing:** Implements SHA-256 hashing (industry standard for data integrity).
+- **Matching Logic:** Includes validation for "Retype Password" workflows.
+- **REST-Ready:** Returns dictionary objects for easy integration into web frameworks like Flask or FastAPI.
 
----
+
